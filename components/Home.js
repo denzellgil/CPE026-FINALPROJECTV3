@@ -2,13 +2,12 @@ import React, { useState, useCallback } from "react";
 import { Image } from "expo-image";
 import { StyleSheet, View, Text, Pressable, Modal } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import SideBar from "./SideBar";
 import { Border, Color, FontSize, FontFamily } from "../GlobalStyles";
 
 const Home = () => {
-  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+  const navigation = useNavigation();
   const [alignLeftIconVisible, setAlignLeftIconVisible] = useState(false);
 
   const openAlignLeftIcon = useCallback(() => {

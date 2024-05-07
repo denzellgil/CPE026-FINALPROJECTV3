@@ -1,16 +1,11 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { Image } from "expo-image";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
-export type SideBarType = {
-  onClose?: () => void;
-};
-
-const SideBar = ({ onClose }: SideBarType) => {
-  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+const SideBar = ({ onClose }) => {
+  const navigation = useNavigation();
 
   return (
     <View style={[styles.sidebar, styles.sidebarLayout]}>

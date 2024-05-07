@@ -2,16 +2,11 @@ import * as React from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-export type LoginType = {
-  onClose?: () => void;
-};
-
-const Login = ({ onClose }: LoginType) => {
-  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+const Login = ({ onClose }) => {
+  const navigation = useNavigation();
 
   return (
     <LinearGradient
